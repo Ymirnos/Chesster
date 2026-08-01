@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+html, body {
+  background-image: var(--bg-gif, url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2ZjMng1MTIybmE1b2JlY2J6bnV1d21uMHdmZ21saXdyazN1YWRuYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnq52t8atIw3m/giphy.gif')) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-color: #0c0b0a;
+  color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+/* Special handling for dragging pieces - keeping it intuitive but thematic if possible */
+.react-chessboard-piece {
+  cursor: grab !important;
+}
+.react-chessboard-piece:active {
+  cursor: grabbing !important;
+}
+
+/* Allow text inputs and textareas to have normal selection & insertion cursors */
+input, textarea, [contenteditable="true"] {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  caret-color: auto !important; /* Enable normal caret inside text fields */
+}
+
+/* Support for modern browsers scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a453f #1e1c1a;
+  caret-color: transparent; /* Disable text insertion carets globally on non-input elements */
+}
+
+/* Beautiful thin custom dark scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1c1a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a453f;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Premium White Dotted Background Pattern on a Slate/Charcoal Canvas */
+.dotted-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-color: #0c0b0a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
+
+/* Cosmic Ambient Overlay to preserve readability for active chessboard */
+.cosmic-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+  background: radial-gradient(circle at 50% 50%, rgba(12, 11, 10, 0.15) 0%, rgba(12, 11, 10, 0.75) 100%);
+  pointer-events: none;
+}
+
+/* Nebula style 1 */
+.nebula-1 {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 60%, transparent 100%);
+  filter: blur(80px);
+  animation: nebula-drift-1 25s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+/* Nebula style 2 */
+.nebula-2 {
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 70%, transparent 100%);
+  filter: blur(100px);
+  animation: nebula-drift-2 30s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+/* Nebula style 3 */
+.nebula-3 {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 75%, transparent 100%);
+  filter: blur(90px);
+  animation: nebula-drift-1 20s infinite alternate-reverse ease-in-out;
+  pointer-events: none;
+}
+
+/* Sparkling subtle stars layer */
+.stars-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 150px 80px, rgba(255,255,255,0.85), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 300px 240px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 450px 120px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 580px 390px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 700px 180px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 850px 480px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 1000px 300px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 1200px 150px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 1350px 420px, rgba(255,255,255,0.75), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 1500px 280px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 1650px 490px, rgba(255,255,255,0.85), rgba(0,0,0,0));
+  background-size: 550px 550px;
+  opacity: 0.55;
+  animation: star-twinkle 8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Beautiful technical/cosmic cyber grid lines */
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 80%);
+  pointer-events: none;
+}
+
+/* Dark center vignette to keep UI text & chessboard highly readable */
+.radial-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(12, 11, 10, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Cosmic background camera pan/zoom drift animation */
+@keyframes bg-slow-drift {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-3%, 2%) scale(1.06) rotate(1deg);
+  }
+  100% {
+    transform: translate(3%, -2%) scale(1.02) rotate(-1deg);
+  }
+}
+
+/* Light Theme Overrides */
+.light-theme {
+  background-color: #f0f2f5 !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .cosmic-overlay {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.85) 100%);
+}
+
+.light-theme .dotted-bg {
+  background-color: #f0f2f5;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+.light-theme .cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black 10%, transparent 90%);
+}
+
+.light-theme header,
+.light-theme footer {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.light-theme header span,
+.light-theme footer span {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .nebula-1,
+.light-theme .nebula-2,
+.light-theme .nebula-3 {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, transparent 70%);
+}
+
+.light-theme .stars-overlay {
+  opacity: 0.1;
+}
+
+/* Nebula animations */
+@keyframes nebula-drift-1 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -45px) scale(1.1) rotate(45deg);
+  }
+  100% {
+    transform: translate(-20px, 15px) scale(0.9) rotate(90deg);
+  }
+}
+
+@keyframes nebula-drift-2 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-35px, 30px) scale(1.08) rotate(-60deg);
+  }
+  100% {
+    transform: translate(15px, -15px) scale(0.95) rotate(-120deg);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}

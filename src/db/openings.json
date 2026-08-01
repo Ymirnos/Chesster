@@ -1,0 +1,632 @@
+[
+  {
+    "id": "sicilian-najdorf",
+    "eco": "B90",
+    "name": "Sicilian Defense: Najdorf Variation",
+    "type": "variation",
+    "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6",
+    "moves_uci": ["e2e4", "c7c5", "g1f3", "d7d6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "a7a6"],
+    "description": "The Najdorf Variation is one of the most respected and aggressive lines of the Sicilian Defense. Used as a primary weapon by legendary champions like Bobby Fischer and Garry Kasparov, its main goal is to control b5 and prevent early pins while preparing a devastating counter-attack on the queenside or in the center.",
+    "arrows": [["a7a6", "y", "arrow"], ["c3d5", "r", "arrow"]]
+  },
+  {
+    "id": "sicilian-dragon",
+    "eco": "B70",
+    "name": "Sicilian Defense: Dragon Variation",
+    "type": "variation",
+    "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6",
+    "moves_uci": ["e2e4", "c7c5", "g1f3", "d7d6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "g7g6"],
+    "description": "The Dragon Variation is an extremely tactical and sharp defense. Black fianchettos the dark-squared bishop on g7, aiming it like a dragon across the long diagonal. It often leads to opposite-side castling and deadly mutual attacks.",
+    "arrows": [["f8g7", "g", "arrow"], ["g7a1", "b", "arrow"]]
+  },
+  {
+    "id": "sicilian-accelerated-dragon",
+    "eco": "B34",
+    "name": "Sicilian Defense: Accelerated Dragon",
+    "type": "variation",
+    "moves": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6",
+    "moves_uci": ["e2e4", "c7c5", "g1f3", "b8c6", "d2d4", "c5d4", "f3d4", "g7g6"],
+    "description": "In the Accelerated Dragon, Black plays g6 immediately without playing d6, accelerating the fianchetto of the bishop. This aims to play d7-d5 in one single move, bypassing Yugoslav Attack setups found in the standard Dragon.",
+    "arrows": [["g7g6", "g", "arrow"], ["c6d4", "y", "arrow"]]
+  },
+  {
+    "id": "sicilian-scheveningen",
+    "eco": "B80",
+    "name": "Sicilian Defense: Scheveningen Variation",
+    "type": "variation",
+    "moves": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6",
+    "moves_uci": ["e2e4", "c7c5", "g1f3", "d7d6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "e7e6"],
+    "description": "The Scheveningen Variation establishes a solid pawn structure ('small center') with d6 and e6. It is flexible and resilient, though Black must watch out for White's aggressive g4-g5 thrusts (the Keres Attack).",
+    "arrows": [["e7e6", "g", "arrow"], ["d6d5", "b", "arrow"]]
+  },
+  {
+    "id": "sicilian-sveshnikov",
+    "eco": "B33",
+    "name": "Sicilian Defense: Sveshnikov Variation",
+    "type": "variation",
+    "moves": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5",
+    "moves_uci": ["e2e4", "c7c5", "g1f3", "b8c6", "d2d4", "c5d4", "f3d4", "g8f6", "b1c3", "e7e5"],
+    "description": "The Sveshnikov is a highly dynamic line where Black accepts a permanent weakness on the d5 square in exchange for central space and activity, kicking White's knights to the edges of the board.",
+    "arrows": [["e7e5", "r", "arrow"], ["d4b5", "g", "arrow"]]
+  },
+  {
+    "id": "sicilian-alapin",
+    "eco": "B22",
+    "name": "Sicilian Defense: Alapin Variation",
+    "type": "variation",
+    "moves": "1. e4 c5 2. c3",
+    "moves_uci": ["e2e4", "c7c5", "c2c3"],
+    "description": "The Alapin Variation (2.c3) is White's attempt to build a classical pawn center with d4, supported fully by the c3 pawn. Black usually responds aggressively with d5 or Nf6.",
+    "arrows": [["c3c4", "y", "arrow"], ["d7d5", "g", "arrow"]]
+  },
+  {
+    "id": "sicilian-closed",
+    "eco": "B23",
+    "name": "Sicilian Defense: Closed",
+    "type": "defense",
+    "moves": "1. e4 c5 2. Nc3 Nc6",
+    "moves_uci": ["e2e4", "c7c5", "b1c3", "b8c6"],
+    "description": "The Closed Sicilian is a slower, positional approach where White declines the early d4 break. White builds up behind the c3 knight, often setting up a kingside storm with f4 or g3.",
+    "arrows": [["g2g3", "g", "arrow"], ["f2f4", "g", "arrow"]]
+  },
+  {
+    "id": "queens-gambit",
+    "eco": "D06",
+    "name": "Queen's Gambit",
+    "type": "gambit",
+    "moves": "1. d4 d5 2. c4",
+    "moves_uci": ["d2d4", "d7d5", "c2c4"],
+    "description": "One of chess history's oldest and most strategic openings. White offers a flank pawn (c4) to draw Black's d5 pawn away, aiming to seize absolute control of the center with e2-e4.",
+    "arrows": [["c2c4", "g", "arrow"], ["d4d5", "b", "arrow"]]
+  },
+  {
+    "id": "queens-gambit-declined",
+    "eco": "D30",
+    "name": "Queen's Gambit Declined",
+    "type": "defense",
+    "moves": "1. d4 d5 2. c4 e6",
+    "moves_uci": ["d2d4", "d7d5", "c2c4", "e7e6"],
+    "description": "Black declines the gambit pawn to keep a robust foothold in the center with e6, supporting d5. Recognized for deep positional play, it is a staple at world championships.",
+    "arrows": [["f8e7", "g", "arrow"], ["g8f6", "g", "arrow"]]
+  },
+  {
+    "id": "queens-gambit-accepted",
+    "eco": "D20",
+    "name": "Queen's Gambit Accepted",
+    "type": "gambit",
+    "moves": "1. d4 d5 2. c4 dxc4",
+    "moves_uci": ["d2d4", "d7d5", "c2c4", "d5c4"],
+    "description": "Black accepts the c4 pawn. Instead of trying to hold onto the extra pawn, Black focuses on rapid development and queenside operations while White establishes a strong center.",
+    "arrows": [["e2e4", "g", "arrow"], ["c4b5", "y", "arrow"]]
+  },
+  {
+    "id": "slav-defense",
+    "eco": "D10",
+    "name": "Slav Defense",
+    "type": "defense",
+    "moves": "1. d4 d5 2. c4 c6",
+    "moves_uci": ["d2d4", "d7d5", "c2c4", "c7c6"],
+    "description": "The Slav Defense is an extremely solid response to the Queen's Gambit. By supporting d5 with c6, Black avoids locking in the light-squared bishop (unlike the French or Queen's Gambit Declined), keeping a flexible structure.",
+    "arrows": [["c8f5", "g", "arrow"], ["g8f6", "g", "arrow"]]
+  },
+  {
+    "id": "semi-slav-defense",
+    "eco": "D45",
+    "name": "Semi-Slav Defense",
+    "type": "defense",
+    "moves": "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 e6",
+    "moves_uci": ["d2d4", "d7d5", "c2c4", "c7c6", "g1f3", "g8f6", "b1c3", "e7e6"],
+    "description": "A hybrid of Slav and French setups, the Semi-Slav produces rich and complex games. Variations like the Meran and Botvinnik are famous for high-level tactical and theoretical battles.",
+    "arrows": [["d5c4", "g", "arrow"], ["b8d7", "b", "arrow"]]
+  },
+  {
+    "id": "kings-gambit",
+    "eco": "C30",
+    "name": "King's Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. f4",
+    "moves_uci": ["e2e4", "e7e5", "f2f4"],
+    "description": "The Romantic Era's favorite attacking tool. White offers the f-pawn to deflect Black's center pawn, opening files and diagonals for a rapid, beautiful attack aiming directly at f7.",
+    "arrows": [["f4e5", "g", "arrow"], ["f1c4", "g", "arrow"]]
+  },
+  {
+    "id": "kings-gambit-accepted",
+    "eco": "C34",
+    "name": "King's Gambit Accepted",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. f4 exf4",
+    "moves_uci": ["e2e4", "e7e5", "f2f4", "e7f4"],
+    "description": "Black accepts the gambit pawn. White develops with Nf3 to prevent early queen checks on h4, preparing central play (d4) and recapturing f4 with active, open lines.",
+    "arrows": [["g1f3", "g", "arrow"], ["f1c4", "g", "arrow"]]
+  },
+  {
+    "id": "ruy-lopez",
+    "eco": "C60",
+    "name": "Ruy Lopez (Spanish Opening)",
+    "type": "opening",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5"],
+    "description": "The Ruy Lopez (or Spanish Opening) is one of the deepest openings. White puts pressure on the c6 knight, which defends e5, preparing central expansion. It requires robust positional knowledge.",
+    "arrows": [["b5c6", "g", "arrow"], ["e4e5", "b", "arrow"]]
+  },
+  {
+    "id": "ruy-lopez-berlin",
+    "eco": "C67",
+    "name": "Ruy Lopez: Berlin Defense",
+    "type": "defense",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "g8f6"],
+    "description": "Known as the 'Berlin Wall', this solid defense was famously used by Vladimir Kramnik to defeat Garry Kasparov in their 2000 World Championship match. Black seeks simplification into a resilient endgame.",
+    "arrows": [["f6e4", "g", "arrow"], ["e1g1", "b", "arrow"]]
+  },
+  {
+    "id": "evans-gambit",
+    "eco": "C51",
+    "name": "Evans Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "b2b4"],
+    "description": "Named after Captain William Evans, White sacrifices the b-pawn to deflect Black's dark-squared bishop, paving the way for a rapid c3 and d4 to secure crushing central dominance.",
+    "arrows": [["b4b5", "g", "arrow"], ["c2c3", "g", "arrow"]]
+  },
+  {
+    "id": "fried-liver",
+    "eco": "C57",
+    "name": "Italian Game: Fried Liver Attack",
+    "type": "variation",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nxd5 6. Nxf7",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "f3g5", "d7d5", "e4d5", "f6d5", "g5f7"],
+    "description": "An aggressive, double-edged attack where White sacrifices a knight on f7 to drag Black's king into the center. This leads to wild, highly tactical battles with maximum pressure on the exposed king.",
+    "arrows": [["f7h8", "g", "arrow"], ["d1f3", "g", "arrow"]]
+  },
+  {
+    "id": "caro-kann",
+    "eco": "B12",
+    "name": "Caro-Kann Defense",
+    "type": "defense",
+    "moves": "1. e4 c6",
+    "moves_uci": ["e2e4", "c7c6"],
+    "description": "The Caro-Kann is one of Black's most reliable answers to e4, planning a solid c6-d5. It keeps structural integrity and easily solves the French defense's issue with the light-squared bishop.",
+    "arrows": [["d7d5", "g", "arrow"], ["c6d5", "b", "arrow"]]
+  },
+  {
+    "id": "french-defense",
+    "eco": "C00",
+    "name": "French Defense",
+    "type": "defense",
+    "moves": "1. e4 e6",
+    "moves_uci": ["e2e4", "e7e6"],
+    "description": "A robust defense where Black sets up an e6-d5 counter-attack. It creates closed positions with strong counterplay on the queenside, though Black must resolve development of the c8 'French Bishop'.",
+    "arrows": [["d7d5", "g", "arrow"], ["c8d7", "y", "arrow"]]
+  },
+  {
+    "id": "scandinavian-defense",
+    "eco": "B01",
+    "name": "Scandinavian Defense",
+    "type": "defense",
+    "moves": "1. e4 d5",
+    "moves_uci": ["e2e4", "d7d5"],
+    "description": "Immediately challenges White's e4 pawn from move one. Usually continues with 2.exd5 Qxd5 3.Nc3 Qa5, giving Black open lines and rapid queen activation in exchange for minor temporal concessions.",
+    "arrows": [["e4d5", "g", "arrow"], ["d8d5", "b", "arrow"]]
+  },
+  {
+    "id": "kings-indian",
+    "eco": "E60",
+    "name": "King's Indian Defense",
+    "type": "defense",
+    "moves": "1. d4 Nf6 2. c4 g6 3. Nc3 Bg7",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "g7g6", "b1c3", "f8g7"],
+    "description": "A highly dynamic hypermodern opening. Black allows White a broad pawn center and then strikes back at it with d6, e5, or c5, leading to wild kingside attacks and rich strategic complexity.",
+    "arrows": [["e7e5", "g", "arrow"], ["f7f5", "g", "arrow"]]
+  },
+  {
+    "id": "nimzo-indian",
+    "eco": "E40",
+    "name": "Nimzo-Indian Defense",
+    "type": "defense",
+    "moves": "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "e7e6", "b1c3", "f8b4"],
+    "description": "Introduced by Aaron Nimzowitsch, this is one of Black's most reliable weapons against d4. Black pins White's c3 knight, controlling e4 and potentially damaging White's pawn structure with Bb4xNc3.",
+    "arrows": [["b4c3", "g", "arrow"], ["f6e4", "g", "arrow"]]
+  },
+  {
+    "id": "scandinavian-modern",
+    "eco": "B01",
+    "name": "Scandinavian Defense: Modern Variation",
+    "type": "variation",
+    "moves": "1. e4 d5 2. exd5 Nf6",
+    "moves_uci": ["e2e4", "d7d5", "e4d5", "g8f6"],
+    "description": "By playing Nf6 instead of capturing with the Queen immediately, Black avoids early harassment by White's Nc3 while preparing to seize the d5 pawn with more active development.",
+    "arrows": [["f6d5", "g", "arrow"], ["d2d4", "b", "arrow"]]
+  },
+  {
+    "id": "stafford-gambit",
+    "eco": "C42",
+    "name": "Petroff Defense: Stafford Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "g8f6", "f3e5", "b8c6"],
+    "description": "A wild and legendary trick-heavy gambit for Black. Black sacrifices a central pawn to rapidly open files and lines, gaining tricky attacking lines and tactical traps against weak spots like f2 or h2.",
+    "arrows": [["c6e5", "g", "arrow"], ["f8c5", "g", "arrow"]]
+  },
+  {
+    "id": "smith-morra-gambit",
+    "eco": "B21",
+    "name": "Sicilian Defense: Smith-Morra Gambit",
+    "type": "gambit",
+    "moves": "1. e4 c5 2. d4 cxd4 3. c3",
+    "moves_uci": ["e2e4", "c7c5", "d2d4", "c5d4", "c2c3"],
+    "description": "A high-octane gambit weapon against the Sicilian. White sacrifices a pawn on c3 to gain rapid, open lines for the rooks/queen and swift developmental dominance in the center.",
+    "arrows": [["c3d4", "g", "arrow"], ["c1a3", "b", "arrow"]]
+  },
+  {
+    "id": "halloween-gambit",
+    "eco": "C47",
+    "name": "Four Knights Game: Halloween Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. Nxe5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "b1c3", "g8f6", "f3e5"],
+    "description": "An unbelievably shocking sacrifice. White sacrifices a whole knight on e5 on move 4! In return, White gains a massive, driving pawn center that chases Black's knights back to their home bases.",
+    "arrows": [["e4e5", "r", "arrow"], ["d4d5", "r", "arrow"]]
+  },
+  {
+    "id": "cochrane-gambit",
+    "eco": "C42",
+    "name": "Petroff Defense: Cochrane Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nxf7",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "g8f6", "f3e5", "d7d6", "e5f7"],
+    "description": "White sacrifices a knight on f7 early in the Petroff. Black's king is forced to march forward and lose all safety, creating highly active attacking pathways for White in exchange for the piece.",
+    "arrows": [["e1g1", "g", "arrow"], ["d2d4", "g", "arrow"]]
+  },
+  {
+    "id": "tennison-gambit",
+    "eco": "A06",
+    "name": "Zukertort Opening: Tennison Gambit",
+    "type": "gambit",
+    "moves": "1. Nf3 d5 2. e4",
+    "moves_uci": ["g1f3", "d7d5", "e2e4"],
+    "description": "An elegant, surprising gambit. White responds to d5 with e4, drawing Black's central attention. If Black takes on e4, White's knight immediately jumps to g5 to threaten f7 and h7 targets.",
+    "arrows": [["f3g5", "g", "arrow"], ["e4e5", "b", "arrow"]]
+  },
+  {
+    "id": "latvian-gambit",
+    "eco": "C40",
+    "name": "Latvian Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 f5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "f7f5"],
+    "description": "An incredibly old and chaotic countergambit. Black immediately retaliates with f5 on move two, creating sharp and aggressive tactical complications where king safety is quickly cast aside.",
+    "arrows": [["f5e4", "r", "arrow"], ["g1f3", "y", "arrow"]]
+  },
+  {
+    "id": "englund-gambit",
+    "eco": "A40",
+    "name": "Englund Gambit",
+    "type": "gambit",
+    "moves": "1. d4 e5",
+    "moves_uci": ["d2d4", "e7e5"],
+    "description": "An immediate tactical strike against White's d4 opening. Black offers the e-pawn to gain rapid queenside development, planning tricky tactical mates and pins along the e1-h4 diagonals.",
+    "arrows": [["e5d4", "g", "arrow"], ["d8e7", "b", "arrow"]]
+  },
+  {
+    "id": "blackburne-shilling-gambit",
+    "eco": "C50",
+    "name": "Italian Game: Blackburne Shilling Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nd4",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "c6d4"],
+    "description": "A famous psychological trap. Black 'carelessly' leaves the e5 pawn unguarded. If White falls for Nxe5, Black retaliates with Qg5, unleashing devastating tactical traps starting with the g2 and f2 targets.",
+    "arrows": [["d4f3", "r", "arrow"], ["d8g5", "g", "arrow"]]
+  },
+  {
+    "id": "schliemann-defense",
+    "eco": "C63",
+    "name": "Ruy Lopez: Schliemann Defense (Jaenisch Gambit)",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 f5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "f7f5"],
+    "description": "A very sharp counterattack against the Spanish Game. Black strikes the e4 pawn immediately with f5, setting up messy tactical complications and active lines for their f-file rook of king-safety consequence.",
+    "arrows": [["f5e4", "g", "arrow"], ["c6d4", "y", "arrow"]]
+  },
+  {
+    "id": "belgrade-gambit",
+    "eco": "C47",
+    "name": "Four Knights Game: Belgrade Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. d4 exd4 5. Nd5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "b1c3", "g8f6", "d2d4", "e5d4", "c3d5"],
+    "description": "White leaves the d4 pawn behind and jumps with the knight directly into d5. This creates an imbalance where tactics quickly override traditional positional guidelines.",
+    "arrows": [["d5f6", "g", "arrow"], ["f3d4", "b", "arrow"]]
+  },
+  {
+    "id": "wing-gambit",
+    "eco": "B20",
+    "name": "Sicilian Defense: Wing Gambit",
+    "type": "gambit",
+    "moves": "1. e4 c5 2. b4",
+    "moves_uci": ["e2e4", "c7c5", "b2b4"],
+    "description": "A flank gambit where White plays b4 early against the Sicilian. White aims to trade the b-pawn for Black's c-pawn, clearing the way to build a classic d4-e4 central pawn wedge.",
+    "arrows": [["b4c5", "g", "arrow"], ["d2d4", "b", "arrow"]]
+  },
+  {
+    "id": "bogo-indian-defense",
+    "eco": "E11",
+    "name": "Bogo-Indian Defense",
+    "type": "defense",
+    "moves": "1. d4 Nf6 2. c4 e6 3. Nf3 Bb4+",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "e7e6", "g1f3", "f8b4"],
+    "description": "The Bogo-Indian Defense develops the dark-squared bishop to b4 with check, prompting White to choose how to block. It is a solid, clean, and highly regarded defense that leads to safe positional structures.",
+    "arrows": [["b4d2", "g", "arrow"], ["c4c5", "y", "arrow"]]
+  },
+  {
+    "id": "londonsystem",
+    "eco": "A48",
+    "name": "London System",
+    "type": "opening",
+    "moves": "1. d4 Nf6 2. Nf3 d5 3. Bf4",
+    "moves_uci": ["d2d4", "g8f6", "g1f3", "d7d5", "c1f4"],
+    "description": "An incredibly popular, robust opening system. White develops the dark-squared bishop to f4 prior to playing e3, which achieves a rock-solid, harmonious setup with very low theoretical risk.",
+    "arrows": [["f4d6", "b", "arrow"], ["e2e3", "g", "arrow"]]
+  },
+  {
+    "id": "benko-gambit",
+    "eco": "A57",
+    "name": "Benko Gambit",
+    "type": "gambit",
+    "moves": "1. d4 Nf6 2. c4 c5 3. d5 b5",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "g7g6", "d4d5", "b7b5"],
+    "description": "Black sacrifices a queenside pawn early with b5. This gives Black long-term, structural pressure along the open a and b-files against White's queenside pawns and pieces.",
+    "arrows": [["b5b4", "y", "arrow"], ["f8g7", "g", "arrow"]]
+  },
+  {
+    "id": "danish-gambit",
+    "eco": "C21",
+    "name": "Danish Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. d4 exd4 3. c3",
+    "moves_uci": ["e2e4", "e7e5", "d2d4", "e5d4", "c2c3"],
+    "description": "White offers two adjacent pawns in sequence with c3 and b2. The absolute reward is spectacular laser diagonals for White's dual light and dark-squared attacking bishops.",
+    "arrows": [["c3b4", "g", "arrow"], ["c1b2", "g", "arrow"]]
+  },
+  {
+    "id": "budapest-gambit",
+    "eco": "A52",
+    "name": "Budapest Gambit",
+    "type": "gambit",
+    "moves": "1. d4 Nf6 2. c4 e5",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "e7e5"],
+    "description": "Black reacts aggressively to the Queen's Pawn Game by sacrificing e5 immediately. Black quickly gains open, dynamic play and can set up vicious tactical traps if White attempts to cling to the pawn.",
+    "arrows": [["e5e4", "r", "arrow"], ["f6g4", "g", "arrow"]]
+  },
+  {
+    "id": "scotch-game",
+    "eco": "C45",
+    "name": "Scotch Game",
+    "type": "opening",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. d4",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4"],
+    "description": "An assertive opening where White strikes directly in the center with 3.d4, aiming to secure space and immediate lines for the bishops.",
+    "arrows": [["d4e5", "g", "arrow"], ["c6d4", "b", "arrow"]]
+  },
+  {
+    "id": "scotch-gambit",
+    "eco": "C44",
+    "name": "Scotch Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4", "e5d4", "f1c4"],
+    "description": "White foregoes recapturing the d4 pawn immediately to instead build rapid development. The c4-bishop targets Black's weak f7 square for quick, sharp attacking operations.",
+    "arrows": [["c4f7", "r", "arrow"], ["f3g5", "g", "arrow"]]
+  },
+  {
+    "id": "grobs-attack",
+    "eco": "A00",
+    "name": "Grob's Attack",
+    "type": "opening",
+    "moves": "1. g4",
+    "moves_uci": ["g2g4"],
+    "description": "An eccentric flank opening where White immediately pushes the g-pawn forward. It is highly unorthodox, but presents immediate psychological challenges and unusual tactical lines.",
+    "arrows": [["g4g5", "y", "arrow"], ["c1b2", "g", "arrow"]]
+  },
+  {
+    "id": "sokolsky-opening",
+    "eco": "A00",
+    "name": "Sokolsky (Orangutan) Opening",
+    "type": "opening",
+    "moves": "1. b4",
+    "moves_uci": ["b2b4"],
+    "description": "Also known as the Polish Opening or Orangutan, White advances the b-pawn to secure queenside space and place the dark-squared bishop on b2 immediately.",
+    "arrows": [["b4b5", "y", "arrow"], ["c1b2", "g", "arrow"]]
+  },
+  {
+    "id": "falkbeer-countergambit",
+    "eco": "C31",
+    "name": "King's Gambit Declined: Falkbeer Countergambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. f4 d5",
+    "moves_uci": ["e2e4", "e7e5", "f2f4", "d7d5"],
+    "description": "Black declines White's gambit offer by immediately opening the center with d5, shifting the defensive burden onto White through active counterplay.",
+    "arrows": [["d5e4", "g", "arrow"], ["e5e4", "g", "arrow"]]
+  },
+  {
+    "id": "petroff-defense",
+    "eco": "C42",
+    "name": "Petroff's Defense (Russian Game)",
+    "type": "defense",
+    "moves": "1. e4 e5 2. Nf3 Nf6",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "g8f6"],
+    "description": "An extremely symmetric and ultra-solid defense. Black ignores White's threat on e5 to counter-threaten the e4 pawn, creating resilient structures favored by elite grandmasters.",
+    "arrows": [["f6e4", "g", "arrow"], ["d2d6", "b", "arrow"]]
+  },
+  {
+    "id": "albin-countergambit",
+    "eco": "D08",
+    "name": "Albin Countergambit",
+    "type": "gambit",
+    "moves": "1. d4 d5 2. c4 e5",
+    "moves_uci": ["d2d4", "d7d5", "c2c4", "e7e5"],
+    "description": "Black responds with a chaotic central strike. If White takes, Black advances the d-pawn to d4 (the famous Lasker Trap zone), creating a powerful wedge that disrupts White's coordinate development.",
+    "arrows": [["d5d4", "r", "arrow"], ["e7e6", "g", "arrow"]]
+  },
+  {
+    "id": "blackmar-diemer-gambit",
+    "eco": "D00",
+    "name": "Blackmar-Diemer Gambit",
+    "type": "gambit",
+    "moves": "1. d4 d5 2. e4 dxe4 3. Nc3",
+    "moves_uci": ["d2d4", "d7d5", "e2e4", "d5e4", "b1c3"],
+    "description": "White offers a central e-pawn immediately in the Queen's Pawn Game. White later follows with f3 to open up beautiful, direct kingside attacking lines for severe tactical operations.",
+    "arrows": [["f2f3", "g", "arrow"], ["c1g5", "g", "arrow"]]
+  },
+  {
+    "id": "alekhines-defense",
+    "eco": "B02",
+    "name": "Alekhine's Defense",
+    "type": "defense",
+    "moves": "1. e4 Nf6",
+    "moves_uci": ["e2e4", "g8f6"],
+    "description": "A hypermodern provocation. Black dares White to push the central pawns forward with 2.e5, expecting them to overextend and become prime theoretical targets later in the game.",
+    "arrows": [["f6d5", "g", "arrow"], ["e4e5", "r", "arrow"]]
+  },
+  {
+    "id": "marshall-attack",
+    "eco": "C89",
+    "name": "Ruy Lopez: Marshall Attack",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O 8. c3 d5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6", "b5a4", "g1f3", "e1g1", "f8e7", "e1r1", "b7b5", "a4b3", "e8g8", "c2c3", "d7d5"],
+    "description": "One of chess's most complex gambit attack systems. Formulated by Frank Marshall, Black sacrifices a central pawn to establish an unbelievably ferocious attack against White's castled king.",
+    "arrows": [["d5e4", "g", "arrow"], ["f6g4", "y", "arrow"]]
+  },
+  {
+    "id": "rousseau-gambit",
+    "eco": "C30",
+    "name": "Italian Game: Rousseau Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 f5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f7f5"],
+    "description": "An aggressive countergambit. Black responds to the Italian bishop with an immediate f5 push, aiming to challenge White's e4 pawn and open the f-file for defensive-turned-offensive operations.",
+    "arrows": [["f5e4", "g", "arrow"], ["d7d6", "b", "arrow"]]
+  },
+  {
+    "id": "goering-gambit",
+    "eco": "C44",
+    "name": "Scotch Game: Göring Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "d2d4", "e5d4", "c2c3"],
+    "description": "An intensely sharp gambit where White offers the c3 and b2 pawns in sequence (if accepted) to obtain rapid development and command long, open diagonals.",
+    "arrows": [["c3b4", "g", "arrow"], ["c1a3", "g", "arrow"]]
+  },
+  {
+    "id": "elephant-gambit",
+    "eco": "C40",
+    "name": "Elephant Gambit (Queen's Pawn Countergambit)",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 d5",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "d7d5"],
+    "description": "A very surprising counter-strike by Black on move two. Black immediately challenges the e4 pawn, accepting tactical imbalances in exchange for open central operations.",
+    "arrows": [["d5e4", "g", "arrow"], ["e5e4", "g", "arrow"]]
+  },
+  {
+    "id": "urusov-gambit",
+    "eco": "C55",
+    "name": "Bishop's Opening: Urusov Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Bc4 Nf6 3. d4 exd4 4. Nf3",
+    "moves_uci": ["e2e4", "e7e5", "f1c4", "g8f6", "d2d4", "e5d4", "g1f3"],
+    "description": "White offers the e4 pawn to secure strong, open attacking diagonals. Known for spectacular tactics, it bypasses Petroff setups with sharp, tactical initiatives.",
+    "arrows": [["f3e5", "g", "arrow"], ["e1g1", "g", "arrow"]]
+  },
+  {
+    "id": "jerome-gambit",
+    "eco": "C50",
+    "name": "Italian Game: Jerome Gambit",
+    "type": "gambit",
+    "moves": "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. Bxf7+",
+    "moves_uci": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c4f7"],
+    "description": "An absolutely crazy, ultra-romantic sacrifice. White sacrifices the bishop on f7 on move 4, followed by the knight on e5, simply to drag Black's king out for a wild, chaotic chase.",
+    "arrows": [["f7e8", "r", "arrow"], ["f3e5", "r", "arrow"]]
+  },
+  {
+    "id": "colle-system",
+    "eco": "D05",
+    "name": "Colle System",
+    "type": "opening",
+    "moves": "1. d4 d5 2. Nf3 Nf6 3. e3",
+    "moves_uci": ["d2d4", "d7d5", "g1f3", "g8f6", "e2e3"],
+    "description": "A very solid and harmonious opening system for White. White plans to support the d4 pawn with e3 and c3, aiming to execute a well-timed e4 central breakthrough.",
+    "arrows": [["f1d3", "g", "arrow"], ["e3e4", "g", "arrow"]]
+  },
+  {
+    "id": "torre-attack",
+    "eco": "D03",
+    "name": "Torre Attack",
+    "type": "opening",
+    "moves": "1. d4 d5 2. Nf3 Nf6 3. Bg5",
+    "moves_uci": ["d2d4", "d7d5", "g1f3", "g8f6", "c1g5"],
+    "description": "White develops the dark-squared bishop to g5 early. White establishes a robust, highly positional dynamic that avoids deep theoretical mainlines of primary Queen's Gambit variations.",
+    "arrows": [["g5f6", "g", "arrow"], ["e2e3", "g", "arrow"]]
+  },
+  {
+    "id": "catalan-opening",
+    "eco": "E01",
+    "name": "Catalan Opening",
+    "type": "opening",
+    "moves": "1. d4 Nf6 2. c4 e6 3. g3 d5 4. Bg2",
+    "moves_uci": ["d2d4", "g8f6", "c2c4", "e7e6", "g2g3", "d7d5", "f1g2"],
+    "description": "Favored by world champions, White combines Queen's Gambit structures with a powerful g3 fianchetto of the light-squared bishop to establish long-term pressure on the diagonal.",
+    "arrows": [["g2d5", "b", "arrow"], ["c4d5", "g", "arrow"]]
+  },
+  {
+    "id": "reti-opening",
+    "eco": "A09",
+    "name": "Réti Opening",
+    "type": "opening",
+    "moves": "1. Nf3 d5 2. c4",
+    "moves_uci": ["g1f3", "d7d5", "c2c4"],
+    "description": "Introduced by Richard Réti, this hypermodern classic challenges Black's center from the flanks, using a Nf3 with c4 setup to develop hyper-creative, flexible structures.",
+    "arrows": [["c4d5", "g", "arrow"], ["g2g3", "g", "arrow"]]
+  },
+  {
+    "id": "english-opening",
+    "eco": "A10",
+    "name": "English Opening",
+    "type": "opening",
+    "moves": "1. c4",
+    "moves_uci": ["c2c4"],
+    "description": "A popular hypermodern opening where White stakes an immediate claim to the d5 square from the flank, leading to deeply dynamic, positional games of immense interest.",
+    "arrows": [["g2g3", "g", "arrow"], ["b1c3", "g", "arrow"]]
+  },
+  {
+    "id": "birds-opening",
+    "eco": "A02",
+    "name": "Bird's Opening",
+    "type": "opening",
+    "moves": "1. f4",
+    "moves_uci": ["f2f4"],
+    "description": "White stakes a claim on the e5 square with 1.f4. It creates asymmetric pawn structures with deep strategic themes, though it slightly weakens the e1-h4 diagonal from move one.",
+    "arrows": [["g1f3", "g", "arrow"], ["g2g3", "g", "arrow"]]
+  },
+  {
+    "id": "dutch-defense",
+    "eco": "A80",
+    "name": "Dutch Defense",
+    "type": "defense",
+    "moves": "1. d4 f5",
+    "moves_uci": ["d2d4", "f7f5"],
+    "description": "Black reacts aggressively to d4 by putting a clamp on e4 via f5. This creates asymmetric, highly combative pawn lines that often lead to dramatic kingside attacks.",
+    "arrows": [["f5f4", "y", "arrow"], ["g8f6", "g", "arrow"]]
+  },
+  {
+    "id": "icelandic-gambit",
+    "eco": "B01",
+    "name": "Scandinavian Defense: Icelandic Gambit",
+    "type": "gambit",
+    "moves": "1. e4 d5 2. exd5 Nf6 3. c4 e6",
+    "moves_uci": ["e2e4", "d7d5", "e4d5", "g8f6", "c2c4", "e7e6"],
+    "description": "An excellent counter-gambit within the Scandinavian. Instead of recapturing, Black offers the e6 pawn to secure lightning-fast development and highly active avenues for the minor pieces.",
+    "arrows": [["c4e6", "g", "arrow"], ["f8c5", "g", "arrow"]]
+  }
+]

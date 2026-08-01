@@ -1,0 +1,6 @@
+{
+  "name": "Open Chess Project",
+  "description": "A fully featured chess game with a UI inspired by modern chess platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
